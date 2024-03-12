@@ -12,12 +12,12 @@ const Home = () => {
 
   useEffect(()=>{
     getBeers()
-  })
+  },[])
 
   return (
     <div className='grid'>
         {beers.length 
-           ? beers.map(beer => (<Card data={beer} />))
+           ? beers.map(beer => (<Card data={beer} key={beer.id} />))
            : null
         }
     </div>

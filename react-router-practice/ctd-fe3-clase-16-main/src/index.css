@@ -39,10 +39,16 @@ nav > a:hover {
   color: rgb(105, 103, 103);
 }
 
+button {
+  color: white;
+  padding-left: 2rem;
+}
+
 h1{
   text-align: center;
   cursor: pointer;
   transition: all ease 0.5s;
+  padding-left: 10rem;
 }
 
 h1:hover{

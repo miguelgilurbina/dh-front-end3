@@ -1,15 +1,16 @@
 import React from 'react'
-import Home from '../Home'
-import Contacto from '../Contacto'
-import Beer from '../Beer'
+
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
+  
   return (
     <nav>
+        <h1>Mas que solo bebidas, festejemos el encuentro.</h1>
+        <button  onClick={()=> navigate(-1)}>Go Back</button>
         <Link to='/home'>Home</Link>
         <Link to='/contacto'>Contacto</Link>
-        <Link to='/beer'>Beer</Link>
+        
     </nav>
   )
 }
