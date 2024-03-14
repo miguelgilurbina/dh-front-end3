@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import Home from './Home'
 import Contacto from './Contacto'
-import Beer from './Beer'
+import Character from './Character'
 import './index.css'
 
 
@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Route path='/' element={<App/>}>
         <Route path= 'home' element={<Home/>}/>
         <Route path= 'contacto' element={<Contacto/>}/>
-        <Route path= 'beer/:id' element={<Beer/>}/>
+        <Route path= 'character/:id' element={<Character/>}/>
     </Route>
     </Routes>
     </BrowserRouter>

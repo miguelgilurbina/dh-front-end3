@@ -1,12 +1,12 @@
 import React from 'react'
-
+import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
-  
+  const navigate = useNavigate()
   return (
     <nav>
-        <h1>Mas que solo bebidas, festejemos el encuentro.</h1>
+        <h1>Wubalubadubdub!!! </h1>
         <button  onClick={()=> navigate(-1)}>Go Back</button>
         <Link to='/home'>Home</Link>
         <Link to='/contacto'>Contacto</Link>

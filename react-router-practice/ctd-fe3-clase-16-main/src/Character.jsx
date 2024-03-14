@@ -3,32 +3,32 @@ import { useNavigate,useParams } from 'react-router-dom'
 
 //Esta pagina renderizará cada bebida de manera individual
 
-const Beer = () => {
-    const [beer, setBeer] = useState([])
+const Character = () => {
+    const [character, setCharacter] = useState([])
     const params = useParams()
     const navigate = useNavigate()
 
-    const getBeer = async()=>{
+    const getCharacter = async()=>{
         //Deberas completar este fetch con el parametro correspondiente
-        const res = await fetch(`https://api.punkapi.com/v2/beers/${params.id}`)
+        const res = await fetch(`https://rickandmortyapi.com/api/character/${params.id}`)
         const data = await res.json()
-        setBeer(data[0])
+        setCharacter(data)
     }
 
     useEffect(()=>{
-        getBeer()
+        getCharacter()
     },[])
    
   
   
   return (
     <div>
-        <h2>Cerveza numero ...</h2>
+        <h2>Información de Sujeto</h2>
         <div className='card'>
-            <img src={beer.image_url} alt="beer-detail" />
-            <p>{beer.tagline}</p>
-            <p>{beer.description}</p>
-            <p>{beer.brewers_tips} </p>
+            <img src={character.image} alt="character-detail" />
+            <p>{character.status}</p>
+            <p>{character.name}</p>
+            
         </div>
         <button onClick={()=>navigate(-1)}>Go back</button>
     </div>
@@ -36,4 +36,4 @@ const Beer = () => {
   )
 }
 
-export default Beer
+export default Character
